@@ -335,45 +335,128 @@ footer p {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .home {
+    /* Ajustes na navegação */
+    header {
+        position: relative;
+        background-color: rgba(26, 26, 46, 0.9);
+    }
+
+    .home .container {
         flex-direction: column;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
         text-align: center;
-    }
-
-    .home-image {
-        margin-top: 30px;
-    }
-
-    .about-content,
-    .contact-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-info,
-    .contact-info {
-        justify-content: center;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 80px;
-        right: -100%;
-        width: 200px;
-        height: calc(100% - 80px);
-        background-color: #16213e;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        transition: right 0.3s ease;
-    }
-
-    .nav-links.active {
-        right: 0;
     }
 
     .menu-toggle {
         display: block;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #1a1a2e;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    /* Home Section */
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .home-image img {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+
+    /* Section Title */
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-title span {
+        font-size: 0.9rem;
+    }
+
+    /* About Section */
+    .about-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-info img {
+        width: 80%;
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+
+    .technologies {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tech-card {
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Projects Section */
+    .projects-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Textos e Botões */
+    .text-content, .button-group {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .text-content p, .button-group a {
+        display: block;
+        margin: 10px auto;
+    }
+
+    /* Ajustes Gerais */
+    .container {
+        padding: 0 10px;
     }
 }
